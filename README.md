@@ -1,10 +1,10 @@
 # BitCoin App
 This app is used to get the bitcoin price
 
-## Create Docker image
+### Create Docker image
 * docker build -t bitcoin .
 
-# Run Docker Container
+### Run Docker Container
 * docker run --name bitcoin-app-cont bitcoin
 
 #### Sample Output
