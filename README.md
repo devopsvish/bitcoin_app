@@ -1,5 +1,28 @@
+# Tutorial - AWS Batch Job with Bitcoin app
+Steps to configure the AWS batch job for the python bitcoin app
+
+## AWS Batch - Things to understand
+* Create Compute Environment
+  * `Environment Configuration` - Fargate env, Name of the CE, ServiceRole (BatchServiceRolePolicy)
+  * `Instance Configuration` - maximum vCPUs
+  * `Network Configuration` - VPC, Subnet, SGs
+ 
+* Create Job Queues
+  * `Orchestration type` - Fargate
+  * Name of queue
+  * Priority
+  * Select the above created CE
+  * Create Queue
+ 
+* Create Job Definitions
+* ![image](https://github.com/devopsvish/bitcoin_app/assets/88719789/300fd1f2-1542-4da7-bc8e-33c3d63b8ca7)
+
+
+
+
 # BitCoin App
-This app is used to get the bitcoin price
+* This app is used to get the bitcoin price which is written using flask. 
+* Create a role or configure the aws credentials to put the output to DynamoDB table
 
 ### Create Docker image
 * docker build -t bitcoin .
